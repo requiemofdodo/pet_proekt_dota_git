@@ -1,22 +1,20 @@
+
 class Hero:
     def __init__(self, name, role):
         self.name = name
         self.role = role
         self.skills = []
 
-
     def add_skill(self, skill):
         self.skills.append(skill)
-        return self  # Можно вернуть self для цепочек
-
+        return self  # чтобы было удобно цепляться, не обязательно
 
     def get_skills(self):
         return self.skills
 
-
-    def info(self):
+    def info(self):  # метод с self
         print(f'=== {self.name} ===')
-        print(f'роль:  {self.role}')
+        print(f'Роль: {self.role}')
         print(f'Навыки: {", ".join(self.skills)}')
 
 
